@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //  Create an ItemStore
         let itemStore = ItemStore()
         
+        //  Create an ImageStore
+        
+        let imageStore = ImageStore()
+        
         
         //  Access the ItemsViewController and set its item store
         
@@ -33,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let itemsController = navController.topViewController as! ItemsViewController
         
         itemsController.itemStore = itemStore
+        itemsController.imageStore = imageStore
+
         
         
         return true

@@ -17,6 +17,7 @@
 		8701DC091E4B458500E1704B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701DC081E4B458500E1704B /* ItemsViewController.swift */; };
 		8701DC0B1E4DDE1E00E1704B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701DC0A1E4DDE1E00E1704B /* Item.swift */; };
 		8701DC0D1E50C47300E1704B /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8701DC0C1E50C47300E1704B /* ItemStore.swift */; };
+		870881F91E9309EA00CBB7C1 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870881F81E9309EA00CBB7C1 /* ImageStore.swift */; };
 		877EFD2B1E5DC9580015A9FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EFD2A1E5DC9580015A9FC /* DetailViewController.swift */; };
 		87BAB7781E53106700EBA259 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BAB7771E53106700EBA259 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		8701DC081E4B458500E1704B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
 		8701DC0A1E4DDE1E00E1704B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
 		8701DC0C1E50C47300E1704B /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
+		870881F81E9309EA00CBB7C1 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageStore.swift; path = ../ImageStore.swift; sourceTree = "<group>"; };
 		877EFD2A1E5DC9580015A9FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		87BAB7771E53106700EBA259 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				8701DBDB1E4B448700E1704B /* Main.storyboard */,
 				877EFD2A1E5DC9580015A9FC /* DetailViewController.swift */,
 				8701DC081E4B458500E1704B /* ItemsViewController.swift */,
+				870881F81E9309EA00CBB7C1 /* ImageStore.swift */,
 				87BAB7771E53106700EBA259 /* ItemCell.swift */,
 				8701DC0A1E4DDE1E00E1704B /* Item.swift */,
 				8701DC0C1E50C47300E1704B /* ItemStore.swift */,
@@ -277,6 +280,7 @@
 				8701DC0B1E4DDE1E00E1704B /* Item.swift in Sources */,
 				8701DBE01E4B448700E1704B /* homepwnr.xcdatamodeld in Sources */,
 				87BAB7781E53106700EBA259 /* ItemCell.swift in Sources */,
+				870881F91E9309EA00CBB7C1 /* ImageStore.swift in Sources */,
 				8701DC091E4B458500E1704B /* ItemsViewController.swift in Sources */,
 				8701DC0D1E50C47300E1704B /* ItemStore.swift in Sources */,
 				8701DBD81E4B448700E1704B /* AppDelegate.swift in Sources */,

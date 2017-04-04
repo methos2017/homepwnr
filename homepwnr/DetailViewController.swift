@@ -8,10 +8,63 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+
+//  Зачем UINavigationControllerDelegate ? 
+//  он необходим для PickerDelegate
+
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        //  Забираем нужную картинку
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        
+        //  Записываем картинку в кэш
+        
+        imageStore.setImage(image, forKey: item.itemKey)
+        
+        //  Передаем и кладем на экран
+        
+        imageView.image = image
+        
+        //  убиваем окно
+        dismiss(animated: true, completion: nil)
+        
+    }
     
     
     @IBAction func takePicture(_ sender: Any) {
+        
+        let imagePicker = UIImagePickerController()
+        
+        //  if the device has a camera, take a picture; otherwise
+        
+        //  just pick from photo library
+        
+        //  если есть камера
+        //  то источник камера - по кнопке
+        //  если нет, то источник фотолаборатория
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.sourceType = .camera
+        }
+        else {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        //  делегируем по полной :) - программно
+        
+        imagePicker.delegate = self
+        
+        
+        //  теперь выводим все это дело на экран
+        //  как и в случае с переходами между фрэймами
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
     
     
@@ -26,7 +79,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var imageView: UIImageView!
     
-    var item: Item!
+    var item: Item! {
+        
+        didSet {
+        
+        navigationItem.title = item.name
+        }
+        
+    }
+    
+    var imageStore: ImageStore! //  заводим переменную типа ImageStore - class
     
     let numberFormatter: NumberFormatter = {
         
@@ -77,6 +139,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        
+        //  Получаем ключ ячейки
+        let key = item.itemKey
+        
+        //  Если такой ключ есть, то отображаем его
+        let imageToDisplay = imageStore.image(forKey: key)
+        
+        imageView.image = imageToDisplay
         
         
     }
